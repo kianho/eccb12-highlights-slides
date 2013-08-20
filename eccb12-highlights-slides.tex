@@ -1,0 +1,301 @@
+% 
+% Author: Kian Ho <hui.kian.ho@gmail.com>
+%
+\documentclass[svgnames,x11names]{beamer}
+    \usepackage{etoolbox}
+        \providebool{detailed}
+        \setbool{detailed}{false} % set to 'true' to enabled a slightly longer
+                                  % version of the slideset.
+
+    \usepackage{varwidth}
+    \usepackage{xcolor}
+    \usepackage{graphicx}
+    \usepackage{hyperref}
+    \usepackage{upgreek}
+    \usepackage{varwidth}
+    \usepackage{microtype}
+
+    %
+    % BEAMER THEME AND LAYOUT CONFIGS
+    %
+    \usetheme{Madrid}
+    \usecolortheme{beaver}
+    \setbeamercolor{itemize item}{fg=darkred} % all frames will have red bullets
+    \beamertemplatenavigationsymbolsempty
+
+    \newcommand{\beamerpurple}[1]{{\usebeamercolor[fg]{title}#1}}
+
+    \defbeamertemplate*{title page}{customized}[1][]
+    {
+        \vspace{6ex}
+        \begin{minipage}[c]{\linewidth}
+            \hspace{1ex}
+            \begin{varwidth}{0.45\linewidth}
+                \inserttitlegraphic
+            \end{varwidth}\quad
+            \begin{varwidth}{0.48\linewidth}
+                \usebeamerfont{title}{\usebeamercolor[fg]{title}\inserttitle}\\[0.3ex]
+                \usebeamerfont{subtitle}{\usebeamercolor[fg]{subtitle}\insertsubtitle}\\[3ex]
+                \usebeamerfont{author}\insertauthor\\[3ex]
+                \usebeamerfont{institute}\insertinstitute\\[5ex]
+                \usebeamerfont{date}\insertdate
+            \end{varwidth}
+        \end{minipage}
+    }
+
+\title[ECCB`12 Highlights]{\textbf{ECCB`12}}
+\subtitle{Highlights}
+
+\date{August 16, 2013}
+
+\author[Kian Ho]
+{
+  Kian Ho \\
+  \footnotesize\url{hkho@unimelb.edu.au}
+}
+
+\institute[The Uni.~of Melb.~\& NICTA]
+{
+        Computing and Information Systems,\\
+        The University of Melbourne\\[2ex]
+        NICTA Victoria Research Laboratory
+}
+
+\titlegraphic{\includegraphics[width=\linewidth]{./images/ECCB-2012-small-logo.png}}
+
+\begin{document}
+
+{
+    \setbeamertemplate{footline}{}
+    \begin{frame}[noframenumbering]
+        \titlepage
+    \end{frame}
+}
+
+\begin{frame}{Basel, Switzerland}
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \includegraphics[width=0.65\linewidth]{./images/Basel-Rheine.jpg}\\
+        Basel \& The Rhine\\
+    \end{minipage}
+    \vfill
+    University of Basel\\
+    ETH Z\"{u}rich\\
+    Swiss Institute of Bioinformatics (SIB)
+\end{frame}
+
+\begin{frame}
+    \vfill
+    The ECCB is the premier European conference in comp.~biology.\\[3ex]
+    \begin{minipage}[c]{0.5\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{./images/ECCB-slide.png}
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.45\linewidth}
+        \beamerpurple{Date} September 9--12, 2012\\
+        \beamerpurple{Location} Basel, Switzerland\\[2ex]
+        More than 1000 attendees\\
+        340 submissions\\
+        48 accepted oral presentations\\
+        2 satellite meetings\\
+        6 workshops\\
+        5 tutorials
+    \end{minipage}\\[3ex]
+    ISMB/ECCB 2013 was held in Berlin, Germany.
+    \vfill
+\end{frame}
+
+\begin{frame}{ECCB`12}
+    \framesubtitle{Proceedings tracks}
+    Sequencing and sequence analysis\\
+    \vfill
+    Mutations, variations, and population genomics\\
+    \vfill
+    Evolution, phylogeny, and comparative genomics\\
+    \vfill
+    \beamerpurple{Macromolecular structure, dynamics, and function}\\
+    \vfill
+    \beamerpurple{Protein interactions, molecular networks, and proteomics}\\
+    \vfill
+    Regulation, pathways, and systems biology\\
+    \vfill
+    Bioimaging, spatial-temporal modeling, and data visualisation\\
+    \vfill
+    Databases, ontologies, and text mining\\
+    \vfill
+    Bioinformatics of health and disease, biomarkers, and personalised
+    medicine\\
+    \vfill
+    Applied and translational bioinformatics
+\end{frame}
+
+\begin{frame}
+    \frametitle{ECCB`12}
+    \framesubtitle{Keynotes}
+
+    Aaron Ciechanover, Barry Honig, Laurent Keller, Gene Myers,
+    Mihaela Zavlovan, S\o{}ren Brunak, and Denis Noble.\\[2ex]
+    \begin{minipage}[c]{0.45\linewidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{./images/Gene-Myers.jpg}\\
+        Gene Myers
+    \end{minipage}
+    \begin{minipage}[c]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{./images/Denis-Noble.jpg}\\
+        Christoph Denoth (L), Denis Noble (R)
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{ECCB`12}
+    \ifbool{detailed}{
+        \framesubtitle{Highlight presentations}
+
+        Modelling muscle energy transfer and whole body heat transport during
+        mountain time trial in the Tour de France.\\
+        \begin{itemize}
+            \item Johannes van Beek, NCSB, Netherlands
+        \end{itemize}
+    }{
+        \framesubtitle{Highlight presentation}
+    }
+
+    \textbf{Three dimensional structures of membrane proteins from genomic
+    sequencing.}
+    \begin{itemize}
+        \item Chris Sander, Memorial Sloan-Kettering Cancer Center, USA
+        \item \emph{De novo} prediction of $\upalpha$-helical
+            transmembrane protein structures using \beamerpurple{only sequence
+            information}, no templates, no molecular dynamics.
+    \end{itemize}
+    \vspace{1ex}
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \def\imgheight{37mm}
+        \begin{minipage}[c]{\linewidth}
+            \centering
+            %\includegraphics[height=20mm]{./images/Chris-Sander.png}
+            \includegraphics[height=\imgheight]{./images/Chris-Sander.png}
+        \end{minipage}
+        \quad
+    \end{minipage}
+\end{frame}
+
+\ifbool{detailed}{
+\begin{frame}
+    \frametitle{Three dimensional structures of membrane proteins from genomic
+    sequencing.}
+    %\framesubtitle{Dr.~Chris Sander, Sloan--Kettering Institute, USA}
+    \emph{De novo} prediction of \beamerpurple{alpha-helical transmembrane
+    proteins} using only sequence information.
+    \begin{itemize}
+        \item No homologous structures, fragment libraries, or MD are used.
+    \end{itemize}
+    %\vspace{1ex}
+    Their algorithm, \beamerpurple{EVfold}, uses co-evolving residue pairs
+    within a protein family as indicators of their close spatial
+    proximity.\\[2ex]
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \includegraphics[height=30mm]{./images/Correlated-Mutations.png}\\
+        % image source:
+        % http://bio1152.nicerweb.net/doc/class/bio1151/Locked/media/ch07/07_08TransmembraneProtein.jpg
+        \scriptsize\citep{Hopf2012}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Three dimensional structures of membrane proteins from genomic
+    sequencing.}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\linewidth]{./images/Hopf2012-example-results.jpg}
+        \caption{Predicted (blue) and experimental (grey) structures.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Three dimensional structures of membrane proteins from genomic
+    sequencing.}
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \includegraphics[width=0.3\linewidth]{./images/Kian-Question-Time.png}
+    \end{minipage}\\[3ex]
+    Answer: approx.~3--4 \AA{} RMSD \citep{Marks2011}
+\end{frame}
+}
+
+\begin{frame}
+    \frametitle{ECCB`12}
+    \framesubtitle{Other highlights}
+    
+    \begin{minipage}[c]{0.6\linewidth}
+        \centering
+        \includegraphics<1>[width=\linewidth]{./images/ESCS-2012.jpg}
+        \includegraphics<2>[width=0.7\linewidth]{./images/Bill-Rapp.jpg}
+        \includegraphics<3>[width=\linewidth]{./images/Poster-Session.jpg}
+        \includegraphics<4>[width=\linewidth]{./images/Basel-at-Night.jpg}
+        \ifbool{detailed}{
+            \includegraphics<5>[width=\linewidth]{./images/Conference-Dinner.jpg}
+        }
+    \end{minipage}
+    \begin{minipage}[c]{0.35\linewidth}
+        \alert<1>{}
+        \begin{itemize}
+            \setlength{\itemindent}{0em}
+            \item[]\alert<1>{European Student Council Symposium\\[2ex]}
+            \item[]\alert<2>{IBM Watson in Healthcare\\[2ex]}
+            \item[]\alert<3>{Poster sessions\\[2ex]}
+            \item[]\alert<4>{Basel @ Night Tours\\[2ex]}
+            \ifbool{detailed}{
+                \item[]\alert<5>{Conference Dinner}
+            }
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{ECCB`12}
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \includegraphics[height=0.75\paperheight]{./images/Apple-etching.jpg}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}
+    \begin{minipage}[c]{\linewidth}
+        \centering
+        \includegraphics[height=0.85\paperheight]{./images/ECCB14-Ad.png}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Acknowledgements}
+    Supervisors
+    \begin{itemize}
+        \item Dr.~Mike Kuiper, Prof.~Rao Kotagiri
+    \end{itemize}
+    \vspace{2ex}
+    Travel funding
+    \begin{itemize}
+        \item \beamerpurple{Victorian Life Sciences Computation Initiative (VLSCI)}
+        \item NICTA 
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=\linewidth]{./images/Acknowledgements.jpg}\\[2ex]
+        Thank You! Questions?
+    \end{center}
+\end{frame}
+
+\begin{frame}{Attributions}
+    The ECCB`12 images and photographs used in this presentation were
+    obtained from the official ECCB`12 website
+    (\href{http://www.eccb12.org}{http://www.eccb12.org}).\\[2ex]
+
+    The ECCB`14 image was obtained from the official ECCB`14 website
+    (\href{http://www.eccb14.org}{http://www.eccb14.org}).\\[2ex]
+
+    The image of the Swiss railway clock was obtained from
+    \href{http://en.wikipedia.org/wiki/File:BahnhofsuhrZuerich_RZ.jpg}{http://en.wikipedia.org/wiki/File:BahnhofsuhrZuerich\_RZ.jpg}.
+\end{frame}
+
+\end{document}
